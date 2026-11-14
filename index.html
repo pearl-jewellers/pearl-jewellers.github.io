@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pearl Jewellers Kechery | Gold Jewellery &amp; Today's Gold Rate</title>
+<meta name="description" content="Pearl Jewellers, Wadakkanchery Road, Kechery. Today's live gold rate, bangles, chains, necklaces, rings and more.">
+<link rel="icon" href="https://cdn.webbyz.com/uploads/04122025/mini_1850574451126288_1764845324.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="gFace" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd966"/><stop offset=".35" stop-color="#e0a21f"/><stop offset=".7" stop-color="#b9780f"/><stop offset="1" stop-color="#8a5508"/></linearGradient>
+  <linearGradient id="gRim" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#8a5508"/><stop offset=".5" stop-color="#e8b53a"/><stop offset="1" stop-color="#ffd966"/></linearGradient>
+  <linearGradient id="gInset" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a86f0e"/><stop offset=".5" stop-color="#d79d1f"/><stop offset="1" stop-color="#f3c44f"/></linearGradient>
+  <linearGradient id="gEmb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a4b05"/><stop offset="1" stop-color="#4f2f02"/></linearGradient>
+  <radialGradient id="gShine" cx=".3" cy=".25" r=".6"><stop offset="0" stop-color="#ffe9a0" stop-opacity=".75"/><stop offset="1" stop-color="#ffe9a0" stop-opacity="0"/></radialGradient>
+  <filter id="emb" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx=".7" dy=".9" stdDeviation=".25" flood-color="#ffe08a" flood-opacity=".9"/><feDropShadow dx="-.4" dy="-.5" stdDeviation=".2" flood-color="#3a2200" flood-opacity=".7"/></filter>
+  <g id="coin3d">
+    <ellipse cx="60" cy="122" rx="40" ry="4.5" fill="#000" opacity=".28"/>
+    <circle cx="60" cy="66" r="56" fill="#6e4508"/>
+    <circle cx="60" cy="63" r="56" fill="#9a6410"/>
+    <circle cx="60" cy="60" r="56" fill="url(#gRim)"/>
+    <circle cx="60" cy="60" r="50" fill="url(#gInset)" stroke="#7a4b05" stroke-width="1"/>
+    <circle cx="60" cy="60" r="52.5" fill="none" stroke="#ffe08a" stroke-width="1.6" stroke-dasharray="1.2 2.6" opacity=".9"/>
+    <circle cx="60" cy="60" r="45" fill="url(#gFace)" stroke="#ffe08a" stroke-width=".8" stroke-opacity=".7"/>
+    <g filter="url(#emb)" fill="url(#gEmb)">
+      <g transform="translate(.8 4.5) scale(.12)">
+        <polygon points="322,175 350,148 637,148 665,177"/>
+        <polygon points="322,203 665,203 590,318 402,318 376,283 556,283 582,258 566,240 345,240"/>
+        <polygon points="420,342 487,342 525,415 494,455"/>
+        <polygon points="505,342 570,342 538,392"/>
+      </g>
+      <text x="60" y="76" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-weight="700" font-size="17" letter-spacing="1.5">PEARL</text>
+      <text x="60" y="87" text-anchor="middle" font-family="Poppins,Arial,sans-serif" font-weight="600" font-size="5.6" letter-spacing="2.2">JEWELLERS</text>
+    </g>
+    <path d="M18 40 A46 46 0 0 1 70 12" fill="none" stroke="#fff0b3" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+    <circle cx="60" cy="60" r="55" fill="url(#gShine)"/>
+  </g>
+</defs></svg>
+
+<!-- Top rate ticker -->
+<div class="ticker" aria-live="polite">
+  <span class="live-dot"></span>
+  <span>Today's Gold: <b id="tickerRate">…</b> / gram</span>
+  <span class="sep">|</span>
+  <span>Updated <span id="tickerTime">…</span></span>
+</div>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <img src="https://cdn.webbyz.com/uploads/04122025/large_1850574451126288_1764845324.webp" alt="Pearl Jewellers logo">
+    <span>Pearl Jewellers<small>Kechery · Since 1996</small></span>
+  </a>
+  <button class="burger" aria-label="Menu" aria-expanded="false" id="burger"><span></span><span></span><span></span></button>
+  <nav id="menu">
+    <a href="#rate">Gold Rate</a>
+    <a href="#collections">Collections</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#enquiry">Enquiry</a>
+    <a href="#visit">Visit Us</a>
+    <a class="btn btn-gold sm" href="tel:+919446145802">Call Now</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="since">Serving you since 1996</p>
+      <p class="eyebrow">Wadakkanchery Road, Kechery</p>
+      <h1>Pure Gold.<br>Honest Price.<br>Trusted Craft.</h1>
+      <p class="lead">Beautiful gold jewellery for every occasion, with today's rate always visible, so you know exactly what you pay.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#rate">See Today's Rate</a>
+        <a class="btn btn-outline" href="#collections">View Collections</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://cdn.webbyz.com/uploads/04122025/large_1850572544027266_1764843505.webp" alt="Pearl Jewellers gold jewellery">
+    </div>
+  </section>
+
+  <!-- Gold rate -->
+  <section class="rate" id="rate">
+    <div class="wrap">
+      <h2 class="title">Today's Gold Rate</h2>
+      <p class="live"><span class="live-dot"></span> Live · refreshes every minute</p>
+      <div class="rate-grid">
+        <article class="rate-card">
+          <div class="coin"><svg viewBox="0 0 120 128" aria-hidden="true"><use href="#coin3d"/></svg></div>
+          <p class="unit">1 Gram</p>
+          <p class="price" id="rate1">₹ …</p>
+        </article>
+        <article class="rate-card">
+          <div class="coin"><svg viewBox="0 0 120 128" aria-hidden="true"><use href="#coin3d"/></svg></div>
+          <p class="unit">8 Grams <small>(1 Pavan)</small></p>
+          <p class="price" id="rate8">₹ …</p>
+        </article>
+      </div>
+      <p class="change" id="change"></p>
+      <div class="calc reveal"><h3>Quick Gold Value Estimator</h3><label>Weight (grams)<input id="calcG" type="number" min="0" step="0.1" value="8" inputmode="decimal"></label><p class="calc-out">≈ <b id="calcOut">₹ …</b> <small>(excl. making charges &amp; GST)</small></p></div>
+      <p class="stamp">Last updated: <span id="rateDate">…</span> · <span id="rateStatus">loading</span></p>
+      <p class="note">Rates are indicative and may change during the day. Making charges and GST extra. Please call to confirm.</p>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section class="collections" id="collections">
+    <div class="wrap">
+      <h2 class="title">Our Collections</h2>
+      <p class="sub">Gold · Silver · Diamond</p>
+      <div class="grid">
+        <figure><img loading="lazy" src="https://cdn.webbyz.com/uploads/04122025/large_1850572546580793_1764843508.webp" alt="Necklace"><figcaption>Necklace</figcaption></figure>
+        <figure><img loading="lazy" src="https://cdn.webbyz.com/uploads/04122025/large_1850572546011178_1764843507.webp" alt="Chain"><figcaption>Chain</figcaption></figure>
+        <figure><img loading="lazy" src="https://cdn.webbyz.com/uploads/04122025/large_1850572545689280_1764843507.webp" alt="Bangle"><figcaption>Bangle</figcaption></figure>
+        <figure><img loading="lazy" src="https://cdn.webbyz.com/uploads/04122025/large_1850572546737195_1764843508.webp" alt="Ring"><figcaption>Ring</figcaption></figure>
+        <figure><img loading="lazy" src="https://cdn.webbyz.com/uploads/04122025/large_1850572546287127_1764843508.webp" alt="Bracelet"><figcaption>Bracelet</figcaption></figure>
+        <figure><img loading="lazy" src="https://cdn.webbyz.com/uploads/04122025/large_1850572545524935_1764843507.webp" alt="Anklets"><figcaption>Anklets</figcaption></figure>
+      </div>
+      <div class="deal reveal">
+        <div class="deal-item"><span class="deal-ic">✦</span><h3>Gold</h3><p>Daily-wear to wedding jewellery</p></div>
+        <div class="deal-item"><span class="deal-ic">◆</span><h3>Silver</h3><p>Ornaments &amp; silverware</p></div>
+        <div class="deal-item"><span class="deal-ic">♦</span><h3>Diamond</h3><p>Elegant diamond jewellery</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="wrap two">
+      <img loading="lazy" src="https://cdn.webbyz.com/uploads/04122025/large_1850572544604027_1764843506.webp" alt="Inside Pearl Jewellers">
+      <div>
+        <div class="emblem"><img class="about-logo" src="https://cdn.webbyz.com/uploads/04122025/large_1850574451126288_1764845324.webp" alt="Pearl Jewellers logo"></div>
+        <h2 class="title left">About Pearl Jewellers</h2>
+        <p class="est">✦ Trusted since 1996 — over 25 years of service ✦</p>
+        <p>We believe in honesty, creativity and collaboration. From daily-wear chains to wedding sets, every piece at Pearl Jewellers Kechery is chosen with care and priced transparently.</p>
+        <ul class="ticks">
+          <li>Transparent daily gold rate</li>
+          <li>Wide range of designs</li>
+          <li>Friendly, trusted service</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <h2 class="title">What Our Customers Say</h2>
+      <p class="sub" id="revSummary">Latest 5-star reviews from Google</p>
+      <div class="rev-grid" id="revGrid"></div>
+      <div class="cta" style="justify-content:center">
+        <a class="btn btn-gold" href="https://maps.app.goo.gl/212oxfKJw4NeH7aW6" target="_blank" rel="noopener">See more reviews on Google ›</a>
+      </div>
+      <div class="review-us reveal">
+        <div class="ru-stars">★★★★★</div>
+        <h3>Loved shopping with us?</h3>
+        <p>Your kind words help other families in Kechery find us. It takes less than a minute.</p>
+        <a class="btn btn-gold" href="https://g.page/r/CeDoKurwdl_dEBE/review" target="_blank" rel="noopener">★ Write a Google Review</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enquiry -->
+  <section class="enquiry" id="enquiry">
+    <div class="wrap narrow">
+      <h2 class="title">Send an Enquiry</h2>
+      <p class="sub">Your message goes straight to our WhatsApp</p>
+      <form id="enqForm" novalidate>
+        <label>Name *<input name="name" required autocomplete="name" placeholder="Your name"></label>
+        <label>Mobile Number *<input name="mobile" required type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number"></label>
+        <label>Subject *<input name="subject" required placeholder="e.g. Wedding necklace, Gold coin, Repair">
+        </label>
+        <label>Message *<textarea name="message" required rows="4" placeholder="Tell us what you are looking for"></textarea></label>
+        <p class="err" id="enqErr" role="alert"></p>
+        <button class="btn btn-wa" type="submit">Send via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <h2 class="title">Visit Us</h2>
+      <div class="visit-grid">
+        <div class="info">
+          <p><b>Pearl Jewellers Kechery</b><br>Wadakkanchery Road, Kechery</p>
+          <p class="hours">🕙 <b>Open:</b> 10:00 AM – 8:00 PM<br><span>Sunday: Closed</span> <em id="openNow" class="openNow"></em></p>
+          <p>Phone / WhatsApp: <a href="tel:+919446145802">+91 94461 45802</a></p>
+          <div class="cta">
+            <a class="btn btn-gold" href="tel:+919446145802">📞 Call</a>
+            <a class="btn btn-wa" href="https://wa.me/919446145802?text=Hello%20Pearl%20Jewellers%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-outline dark" href="https://maps.app.goo.gl/212oxfKJw4NeH7aW6" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+          </div>
+        </div>
+        <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Pearl+Jewellers@10.6191728,76.1223088&hl=en&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="yr"></span> Pearl Jewellers Kechery · Since 1996. All rights reserved.</p>
+</footer>
+
+<!-- Floating action buttons (mobile-friendly) -->
+<div class="fab">
+  <a class="fab-call" href="tel:+919446145802" aria-label="Call">📞</a>
+  <a class="fab-wa" href="https://wa.me/919446145802" target="_blank" rel="noopener" aria-label="WhatsApp">
+    💬
+  </a>
+</div>
+
+<button class="totop" id="toTop" aria-label="Back to top">↑</button>
+<div class="lightbox" id="lb" role="dialog" aria-modal="true"><button aria-label="Close" id="lbX">✕</button><img id="lbImg" alt=""><p id="lbCap"></p></div>
+<script src="app.js"></script>
+</body>
+</html>
