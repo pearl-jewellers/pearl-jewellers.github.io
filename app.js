@@ -108,7 +108,9 @@ loadReviews();
 // ===== Interactivity =====
 // Scroll reveal
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
-document.querySelectorAll(".rate-card,.grid figure,.about .two>*,.visit-grid>*,form,.rev-grid,.title,.calc,.deal").forEach(el => { el.classList.add("reveal"); io.observe(el); });
+document.querySelectorAll(".rate-card,.grid figure,.about .two>*,.visit-grid>*,form,.rev-grid,.title,.calc,.deal,.review-us").forEach(el => { el.classList.add("reveal"); io.observe(el); });
+// Safety net: never leave content hidden (older browsers / missed observer events)
+setTimeout(() => document.querySelectorAll(".reveal:not(.in)").forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight) el.classList.add("in"); }), 2500);
 
 // Active nav link
 const links = [...document.querySelectorAll("nav a[href^='#']")];
