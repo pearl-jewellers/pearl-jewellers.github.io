@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: update-rates   # a late scheduled run and the dispatcher run won't push at the same time
+  cancel-in-progress: false
 jobs:
   update:
     runs-on: ubuntu-latest
