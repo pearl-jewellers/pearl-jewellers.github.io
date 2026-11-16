@@ -1,7 +1,7 @@
 name: Update gold rate
 on:
   schedule:
-    - cron: "30 3-14 * * *"  # hourly 09:00-20:00 IST (cron is UTC), includes 9am and 10am
+    - cron: "30 22-23,0-14 * * *"  # hourly 04:00-20:00 IST (cron is UTC: 22:30 prev day to 14:30)
   workflow_dispatch:
 permissions:
   contents: write
