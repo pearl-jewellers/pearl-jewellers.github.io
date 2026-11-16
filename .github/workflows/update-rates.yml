@@ -2,7 +2,6 @@ name: Update gold rate
 on:
   schedule:
     - cron: "30 3-14 * * *"  # hourly 09:00-20:00 IST (cron is UTC), includes 9am and 10am
-    - cron: "*/10 * * * *"   # best-effort extra refreshes; GitHub throttles/skips these
   workflow_dispatch:
 permissions:
   contents: write
