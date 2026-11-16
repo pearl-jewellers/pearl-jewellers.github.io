@@ -7,13 +7,14 @@ const REFRESH_MS = 60 * 1000;
 const $ = id => document.getElementById(id);
 const fmt = n => "₹ " + Number(n).toLocaleString("en-IN");
 let last = null;
-// e.g. "16-11-2026, 11:37 am IST", built from the ISO timestamp the updater records
+// Date and time (IST) of the last refresh, from the ISO timestamp the updater records.
+// time looks like "5:10pm"; both fall back to the source date if no timestamp yet.
 function stamp(d) {
   const t = d.updated ? new Date(d.updated) : null;
-  if (!t || isNaN(t)) return d.date || "";
-  const dd = t.toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata", day: "2-digit", month: "2-digit", year: "numeric" }).replace(/\//g, "-");
-  const tm = t.toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour: "numeric", minute: "2-digit", hour12: true });
-  return dd + ", " + tm + " IST";
+  if (!t || isNaN(t)) return { date: d.date || "", time: "" };
+  const date = t.toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata", day: "2-digit", month: "2-digit", year: "numeric" }).replaceAll("/", "-");
+  const time = t.toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour: "numeric", minute: "2-digit", hour12: true }).replace(/\s/g, "").toLowerCase();
+  return { date, time };
 }
 
 async function getRates() {
@@ -33,10 +34,10 @@ let show = function (d) {
   $("rate1").textContent = fmt(d.g1);
   $("rate8").textContent = fmt(d.g8);
   $("tickerRate").textContent = fmt(d.g1);
-  const when = stamp(d);
-  $("rateDate").textContent = when || "-";
-  $("tickerTime").textContent = when;
-  $("rateStatus").textContent = d.source === "live" ? "live" : "latest available";
+  const w = stamp(d);
+  $("rateDate").textContent = w.date || "-";
+  $("rateStatus").textContent = w.time ? " · " + w.time : "";
+  $("tickerTime").textContent = w.time ? w.date + " · " + w.time : w.date;
   const c = $("change");
   c.textContent = d.change || "";
   c.className = "change " + (/↑|increase/i.test(d.change || "") ? "up" : /↓|decrease/i.test(d.change || "") ? "down" : "");
