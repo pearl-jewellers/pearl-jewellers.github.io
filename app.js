@@ -7,6 +7,14 @@ const REFRESH_MS = 60 * 1000;
 const $ = id => document.getElementById(id);
 const fmt = n => "₹ " + Number(n).toLocaleString("en-IN");
 let last = null;
+// e.g. "16-11-2026, 11:37 am IST", built from the ISO timestamp the updater records
+function stamp(d) {
+  const t = d.updated ? new Date(d.updated) : null;
+  if (!t || isNaN(t)) return d.date || "";
+  const dd = t.toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata", day: "2-digit", month: "2-digit", year: "numeric" }).replace(/\//g, "-");
+  const tm = t.toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour: "numeric", minute: "2-digit", hour12: true });
+  return dd + ", " + tm + " IST";
+}
 
 async function getRates() {
   if (RATE_API) {
@@ -25,8 +33,9 @@ let show = function (d) {
   $("rate1").textContent = fmt(d.g1);
   $("rate8").textContent = fmt(d.g8);
   $("tickerRate").textContent = fmt(d.g1);
-  $("rateDate").textContent = d.date || "-";
-  $("tickerTime").textContent = d.date || "";
+  const when = stamp(d);
+  $("rateDate").textContent = when || "-";
+  $("tickerTime").textContent = when;
   $("rateStatus").textContent = d.source === "live" ? "live" : "latest available";
   const c = $("change");
   c.textContent = d.change || "";
